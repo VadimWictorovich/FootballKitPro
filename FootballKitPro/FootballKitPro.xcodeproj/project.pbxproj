@@ -15,6 +15,46 @@
 		6C8476732C99DFD500562F5C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476722C99DFD500562F5C /* Base */; };
 		6C8476752C99DFD700562F5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476742C99DFD700562F5C /* Assets.xcassets */; };
 		6C8476782C99DFD700562F5C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476772C99DFD700562F5C /* Base */; };
+		6C8476AE2C9B446600562F5C /* 6896247 1-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C84767E2C9B446600562F5C /* 6896247 1-1.png */; };
+		6C8476AF2C9B446600562F5C /* 6896247 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C84767F2C9B446600562F5C /* 6896247 1.png */; };
+		6C8476B02C9B446600562F5C /* At the beginning of the game, the required number of goals is indicated.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476802C9B446600562F5C /* At the beginning of the game, the required number of goals is indicated.png */; };
+		6C8476B22C9B446600562F5C /* goal-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476822C9B446600562F5C /* goal-1.png */; };
+		6C8476B32C9B446600562F5C /* goal-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476832C9B446600562F5C /* goal-2.png */; };
+		6C8476B42C9B446600562F5C /* goal.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476842C9B446600562F5C /* goal.png */; };
+		6C8476B72C9B446600562F5C /* Group 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476872C9B446600562F5C /* Group 6.png */; };
+		6C8476BC2C9B446600562F5C /* Group 13.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C84768C2C9B446600562F5C /* Group 13.png */; };
+		6C8476BD2C9B446600562F5C /* Group 15.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C84768D2C9B446600562F5C /* Group 15.png */; };
+		6C8476BE2C9B446600562F5C /* Group 16.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C84768E2C9B446600562F5C /* Group 16.png */; };
+		6C8476BF2C9B446600562F5C /* Group 17.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C84768F2C9B446600562F5C /* Group 17.png */; };
+		6C8476C02C9B446600562F5C /* Group 18.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476902C9B446600562F5C /* Group 18.png */; };
+		6C8476C12C9B446600562F5C /* Group 19.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476912C9B446600562F5C /* Group 19.png */; };
+		6C8476C22C9B446600562F5C /* Group 20.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476922C9B446600562F5C /* Group 20.png */; };
+		6C8476C32C9B446600562F5C /* Group 31-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476932C9B446600562F5C /* Group 31-1.png */; };
+		6C8476C42C9B446600562F5C /* Group 31.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476942C9B446600562F5C /* Group 31.png */; };
+		6C8476C52C9B446600562F5C /* Group 32-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476952C9B446600562F5C /* Group 32-1.png */; };
+		6C8476C62C9B446600562F5C /* Group 32.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476962C9B446600562F5C /* Group 32.png */; };
+		6C8476C72C9B446600562F5C /* Group 33.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476972C9B446600562F5C /* Group 33.png */; };
+		6C8476C82C9B446600562F5C /* Group 34.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476982C9B446600562F5C /* Group 34.png */; };
+		6C8476C92C9B446600562F5C /* Group 35.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476992C9B446600562F5C /* Group 35.png */; };
+		6C8476CA2C9B446600562F5C /* Group 38.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C84769A2C9B446600562F5C /* Group 38.png */; };
+		6C8476CB2C9B446600562F5C /* Group 39.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C84769B2C9B446600562F5C /* Group 39.png */; };
+		6C8476CC2C9B446600562F5C /* Group 40.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C84769C2C9B446600562F5C /* Group 40.png */; };
+		6C8476CD2C9B446600562F5C /* Group 41.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C84769D2C9B446600562F5C /* Group 41.png */; };
+		6C8476CE2C9B446600562F5C /* Group 44.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C84769E2C9B446600562F5C /* Group 44.png */; };
+		6C8476CF2C9B446600562F5C /* Group 45.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C84769F2C9B446600562F5C /* Group 45.png */; };
+		6C8476D02C9B446600562F5C /* Group.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476A02C9B446600562F5C /* Group.png */; };
+		6C8476D12C9B446600562F5C /* Popup.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476A12C9B446600562F5C /* Popup.png */; };
+		6C8476D22C9B446600562F5C /* Rectangle 12.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476A22C9B446600562F5C /* Rectangle 12.png */; };
+		6C8476D32C9B446600562F5C /* Rectangle 13.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476A32C9B446600562F5C /* Rectangle 13.png */; };
+		6C8476D42C9B446600562F5C /* Rectangle 14.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476A42C9B446600562F5C /* Rectangle 14.png */; };
+		6C8476D52C9B446600562F5C /* Rectangle 15.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476A52C9B446600562F5C /* Rectangle 15.png */; };
+		6C8476D62C9B446600562F5C /* Tablo-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476A62C9B446600562F5C /* Tablo-1.png */; };
+		6C8476D72C9B446600562F5C /* Tablo-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476A72C9B446600562F5C /* Tablo-2.png */; };
+		6C8476D82C9B446600562F5C /* Tablo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476A82C9B446600562F5C /* Tablo.png */; };
+		6C8476D92C9B446600562F5C /* The character is controlled using touch gestures (that is, the finger will follow the player's finger on the screen).png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476A92C9B446600562F5C /* The character is controlled using touch gestures (that is, the finger will follow the player's finger on the screen).png */; };
+		6C8476DA2C9B446600562F5C /* The scoreboard shows your goals, your opponent's goals and the match time.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476AA2C9B446600562F5C /* The scoreboard shows your goals, your opponent's goals and the match time.png */; };
+		6C8476DB2C9B446600562F5C /* Welcome to the world of football.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476AB2C9B446600562F5C /* Welcome to the world of football.png */; };
+		6C8476DC2C9B446600562F5C /* When you press the button, freezes the enemy for 1-2 seconds, giving the player a chance to score a goal.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476AC2C9B446600562F5C /* When you press the button, freezes the enemy for 1-2 seconds, giving the player a chance to score a goal.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +67,46 @@
 		6C8476722C99DFD500562F5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C8476742C99DFD700562F5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C8476772C99DFD700562F5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6C84767E2C9B446600562F5C /* 6896247 1-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "6896247 1-1.png"; sourceTree = "<group>"; };
+		6C84767F2C9B446600562F5C /* 6896247 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "6896247 1.png"; sourceTree = "<group>"; };
+		6C8476802C9B446600562F5C /* At the beginning of the game, the required number of goals is indicated.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "At the beginning of the game, the required number of goals is indicated.png"; sourceTree = "<group>"; };
+		6C8476822C9B446600562F5C /* goal-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "goal-1.png"; sourceTree = "<group>"; };
+		6C8476832C9B446600562F5C /* goal-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "goal-2.png"; sourceTree = "<group>"; };
+		6C8476842C9B446600562F5C /* goal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goal.png; sourceTree = "<group>"; };
+		6C8476872C9B446600562F5C /* Group 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 6.png"; sourceTree = "<group>"; };
+		6C84768C2C9B446600562F5C /* Group 13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 13.png"; sourceTree = "<group>"; };
+		6C84768D2C9B446600562F5C /* Group 15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 15.png"; sourceTree = "<group>"; };
+		6C84768E2C9B446600562F5C /* Group 16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 16.png"; sourceTree = "<group>"; };
+		6C84768F2C9B446600562F5C /* Group 17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 17.png"; sourceTree = "<group>"; };
+		6C8476902C9B446600562F5C /* Group 18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 18.png"; sourceTree = "<group>"; };
+		6C8476912C9B446600562F5C /* Group 19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 19.png"; sourceTree = "<group>"; };
+		6C8476922C9B446600562F5C /* Group 20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 20.png"; sourceTree = "<group>"; };
+		6C8476932C9B446600562F5C /* Group 31-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 31-1.png"; sourceTree = "<group>"; };
+		6C8476942C9B446600562F5C /* Group 31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 31.png"; sourceTree = "<group>"; };
+		6C8476952C9B446600562F5C /* Group 32-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 32-1.png"; sourceTree = "<group>"; };
+		6C8476962C9B446600562F5C /* Group 32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 32.png"; sourceTree = "<group>"; };
+		6C8476972C9B446600562F5C /* Group 33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 33.png"; sourceTree = "<group>"; };
+		6C8476982C9B446600562F5C /* Group 34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 34.png"; sourceTree = "<group>"; };
+		6C8476992C9B446600562F5C /* Group 35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 35.png"; sourceTree = "<group>"; };
+		6C84769A2C9B446600562F5C /* Group 38.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 38.png"; sourceTree = "<group>"; };
+		6C84769B2C9B446600562F5C /* Group 39.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 39.png"; sourceTree = "<group>"; };
+		6C84769C2C9B446600562F5C /* Group 40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 40.png"; sourceTree = "<group>"; };
+		6C84769D2C9B446600562F5C /* Group 41.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 41.png"; sourceTree = "<group>"; };
+		6C84769E2C9B446600562F5C /* Group 44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 44.png"; sourceTree = "<group>"; };
+		6C84769F2C9B446600562F5C /* Group 45.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 45.png"; sourceTree = "<group>"; };
+		6C8476A02C9B446600562F5C /* Group.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Group.png; sourceTree = "<group>"; };
+		6C8476A12C9B446600562F5C /* Popup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Popup.png; sourceTree = "<group>"; };
+		6C8476A22C9B446600562F5C /* Rectangle 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rectangle 12.png"; sourceTree = "<group>"; };
+		6C8476A32C9B446600562F5C /* Rectangle 13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rectangle 13.png"; sourceTree = "<group>"; };
+		6C8476A42C9B446600562F5C /* Rectangle 14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rectangle 14.png"; sourceTree = "<group>"; };
+		6C8476A52C9B446600562F5C /* Rectangle 15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rectangle 15.png"; sourceTree = "<group>"; };
+		6C8476A62C9B446600562F5C /* Tablo-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tablo-1.png"; sourceTree = "<group>"; };
+		6C8476A72C9B446600562F5C /* Tablo-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tablo-2.png"; sourceTree = "<group>"; };
+		6C8476A82C9B446600562F5C /* Tablo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tablo.png; sourceTree = "<group>"; };
+		6C8476A92C9B446600562F5C /* The character is controlled using touch gestures (that is, the finger will follow the player's finger on the screen).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "The character is controlled using touch gestures (that is, the finger will follow the player's finger on the screen).png"; sourceTree = "<group>"; };
+		6C8476AA2C9B446600562F5C /* The scoreboard shows your goals, your opponent's goals and the match time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "The scoreboard shows your goals, your opponent's goals and the match time.png"; sourceTree = "<group>"; };
+		6C8476AB2C9B446600562F5C /* Welcome to the world of football.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Welcome to the world of football.png"; sourceTree = "<group>"; };
+		6C8476AC2C9B446600562F5C /* When you press the button, freezes the enemy for 1-2 seconds, giving the player a chance to score a goal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "When you press the button, freezes the enemy for 1-2 seconds, giving the player a chance to score a goal.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +147,56 @@
 				6C8476712C99DFD500562F5C /* Main.storyboard */,
 				6C8476742C99DFD700562F5C /* Assets.xcassets */,
 				6C8476762C99DFD700562F5C /* LaunchScreen.storyboard */,
+				6C8476AD2C9B446600562F5C /* 1win soccer_ui */,
 			);
 			path = FootballKitPro;
+			sourceTree = "<group>";
+		};
+		6C8476AD2C9B446600562F5C /* 1win soccer_ui */ = {
+			isa = PBXGroup;
+			children = (
+				6C84767E2C9B446600562F5C /* 6896247 1-1.png */,
+				6C84767F2C9B446600562F5C /* 6896247 1.png */,
+				6C8476802C9B446600562F5C /* At the beginning of the game, the required number of goals is indicated.png */,
+				6C8476822C9B446600562F5C /* goal-1.png */,
+				6C8476832C9B446600562F5C /* goal-2.png */,
+				6C8476842C9B446600562F5C /* goal.png */,
+				6C8476872C9B446600562F5C /* Group 6.png */,
+				6C84768C2C9B446600562F5C /* Group 13.png */,
+				6C84768D2C9B446600562F5C /* Group 15.png */,
+				6C84768E2C9B446600562F5C /* Group 16.png */,
+				6C84768F2C9B446600562F5C /* Group 17.png */,
+				6C8476902C9B446600562F5C /* Group 18.png */,
+				6C8476912C9B446600562F5C /* Group 19.png */,
+				6C8476922C9B446600562F5C /* Group 20.png */,
+				6C8476932C9B446600562F5C /* Group 31-1.png */,
+				6C8476942C9B446600562F5C /* Group 31.png */,
+				6C8476952C9B446600562F5C /* Group 32-1.png */,
+				6C8476962C9B446600562F5C /* Group 32.png */,
+				6C8476972C9B446600562F5C /* Group 33.png */,
+				6C8476982C9B446600562F5C /* Group 34.png */,
+				6C8476992C9B446600562F5C /* Group 35.png */,
+				6C84769A2C9B446600562F5C /* Group 38.png */,
+				6C84769B2C9B446600562F5C /* Group 39.png */,
+				6C84769C2C9B446600562F5C /* Group 40.png */,
+				6C84769D2C9B446600562F5C /* Group 41.png */,
+				6C84769E2C9B446600562F5C /* Group 44.png */,
+				6C84769F2C9B446600562F5C /* Group 45.png */,
+				6C8476A02C9B446600562F5C /* Group.png */,
+				6C8476A12C9B446600562F5C /* Popup.png */,
+				6C8476A22C9B446600562F5C /* Rectangle 12.png */,
+				6C8476A32C9B446600562F5C /* Rectangle 13.png */,
+				6C8476A42C9B446600562F5C /* Rectangle 14.png */,
+				6C8476A52C9B446600562F5C /* Rectangle 15.png */,
+				6C8476A62C9B446600562F5C /* Tablo-1.png */,
+				6C8476A72C9B446600562F5C /* Tablo-2.png */,
+				6C8476A82C9B446600562F5C /* Tablo.png */,
+				6C8476A92C9B446600562F5C /* The character is controlled using touch gestures (that is, the finger will follow the player's finger on the screen).png */,
+				6C8476AA2C9B446600562F5C /* The scoreboard shows your goals, your opponent's goals and the match time.png */,
+				6C8476AB2C9B446600562F5C /* Welcome to the world of football.png */,
+				6C8476AC2C9B446600562F5C /* When you press the button, freezes the enemy for 1-2 seconds, giving the player a chance to score a goal.png */,
+			);
+			path = "1win soccer_ui";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,11 +257,51 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C8476CC2C9B446600562F5C /* Group 40.png in Resources */,
+				6C8476C52C9B446600562F5C /* Group 32-1.png in Resources */,
+				6C8476C22C9B446600562F5C /* Group 20.png in Resources */,
+				6C8476BF2C9B446600562F5C /* Group 17.png in Resources */,
+				6C8476BD2C9B446600562F5C /* Group 15.png in Resources */,
+				6C8476D42C9B446600562F5C /* Rectangle 14.png in Resources */,
+				6C8476D52C9B446600562F5C /* Rectangle 15.png in Resources */,
+				6C8476C42C9B446600562F5C /* Group 31.png in Resources */,
+				6C8476C72C9B446600562F5C /* Group 33.png in Resources */,
+				6C8476CB2C9B446600562F5C /* Group 39.png in Resources */,
+				6C8476B72C9B446600562F5C /* Group 6.png in Resources */,
+				6C8476D72C9B446600562F5C /* Tablo-2.png in Resources */,
+				6C8476B02C9B446600562F5C /* At the beginning of the game, the required number of goals is indicated.png in Resources */,
+				6C8476C92C9B446600562F5C /* Group 35.png in Resources */,
+				6C8476CF2C9B446600562F5C /* Group 45.png in Resources */,
 				6C84766A2C99DFD500562F5C /* GameScene.sks in Resources */,
+				6C8476B42C9B446600562F5C /* goal.png in Resources */,
+				6C8476D22C9B446600562F5C /* Rectangle 12.png in Resources */,
+				6C8476C32C9B446600562F5C /* Group 31-1.png in Resources */,
+				6C8476C12C9B446600562F5C /* Group 19.png in Resources */,
+				6C8476CE2C9B446600562F5C /* Group 44.png in Resources */,
+				6C8476DC2C9B446600562F5C /* When you press the button, freezes the enemy for 1-2 seconds, giving the player a chance to score a goal.png in Resources */,
 				6C8476732C99DFD500562F5C /* Base in Resources */,
+				6C8476D62C9B446600562F5C /* Tablo-1.png in Resources */,
+				6C8476B22C9B446600562F5C /* goal-1.png in Resources */,
+				6C8476BE2C9B446600562F5C /* Group 16.png in Resources */,
+				6C8476C82C9B446600562F5C /* Group 34.png in Resources */,
+				6C8476D82C9B446600562F5C /* Tablo.png in Resources */,
+				6C8476D02C9B446600562F5C /* Group.png in Resources */,
+				6C8476DA2C9B446600562F5C /* The scoreboard shows your goals, your opponent's goals and the match time.png in Resources */,
 				6C8476752C99DFD700562F5C /* Assets.xcassets in Resources */,
+				6C8476CD2C9B446600562F5C /* Group 41.png in Resources */,
+				6C8476DB2C9B446600562F5C /* Welcome to the world of football.png in Resources */,
+				6C8476D92C9B446600562F5C /* The character is controlled using touch gestures (that is, the finger will follow the player's finger on the screen).png in Resources */,
+				6C8476AE2C9B446600562F5C /* 6896247 1-1.png in Resources */,
+				6C8476BC2C9B446600562F5C /* Group 13.png in Resources */,
+				6C8476D12C9B446600562F5C /* Popup.png in Resources */,
+				6C8476D32C9B446600562F5C /* Rectangle 13.png in Resources */,
 				6C84766C2C99DFD500562F5C /* Actions.sks in Resources */,
+				6C8476B32C9B446600562F5C /* goal-2.png in Resources */,
+				6C8476CA2C9B446600562F5C /* Group 38.png in Resources */,
+				6C8476C02C9B446600562F5C /* Group 18.png in Resources */,
+				6C8476C62C9B446600562F5C /* Group 32.png in Resources */,
 				6C8476782C99DFD700562F5C /* Base in Resources */,
+				6C8476AF2C9B446600562F5C /* 6896247 1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,8 +472,8 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,8 +500,8 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
