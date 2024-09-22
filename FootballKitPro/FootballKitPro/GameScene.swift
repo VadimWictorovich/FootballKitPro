@@ -57,8 +57,6 @@ class GameScene: SKScene {
         createObjects()
         createGame()
     }
-    //
-    
     
     // MARK: - METHODS
     func createObjects() {
