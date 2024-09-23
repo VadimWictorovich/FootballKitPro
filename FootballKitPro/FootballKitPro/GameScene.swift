@@ -8,7 +8,7 @@
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene {
+class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //MARK: - PROPERTIES
     
@@ -58,6 +58,15 @@ class GameScene: SKScene {
         createGame()
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        if let touch = touches.first {
+            let touchLocation = touch.location(in: self)
+            
+            let moveAction = SKAction.move(to: touchLocation, duration: 0.4)
+            firstPlayerNode.run(moveAction)
+        }
+    }
+    
     // MARK: - METHODS
     func createObjects() {
         self.addChild(firstBgObject)
@@ -67,7 +76,7 @@ class GameScene: SKScene {
     }
     
     func createGame() {
-        self.physicsWorld.gravity = CGVector(dx: 10, dy: 10)
+        self.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
         createBg()
         createPlayers()
         createBall()
@@ -76,14 +85,14 @@ class GameScene: SKScene {
     func createBg() {
         firstBgTexture = SKTexture(imageNamed: "bgColor1")
         firstBgNode = SKSpriteNode(texture: firstBgTexture)
-        firstBgNode.size.height = self.frame.height - 100
+        firstBgNode.size.height = self.frame.height
         firstBgNode.size.width = self.frame.width
         firstBgNode.zPosition = -2
         firstBgObject.addChild(firstBgNode)
 
         secondBgTexture = SKTexture(imageNamed: "bg")
         secondBgNode = SKSpriteNode(texture: secondBgTexture)
-        secondBgNode.size.height = self.frame.height - 100
+        secondBgNode.size.height = self.frame.height - 300
         secondBgNode.size.width = self.frame.width
         secondBgNode.zPosition = -1
         secondBgObject.addChild(secondBgNode)
@@ -107,7 +116,7 @@ class GameScene: SKScene {
         // опеределяем в каком слое находится объект
         firstPlayerNode.zPosition = 1
         //настраиваем область действия физического тела
-        firstPlayerNode.physicsBody = SKPhysicsBody(rectangleOf: firstPlayerNode.size)
+        firstPlayerNode.physicsBody = SKPhysicsBody(circleOfRadius: firstPlayerNode.size.width / 2)
         //настраиваем динамичность (тоесть реагирует на стокновения гравитацию и тд)
         firstPlayerNode.physicsBody?.isDynamic = true
         // делаем массу телу
@@ -118,6 +127,7 @@ class GameScene: SKScene {
         // выбираем категорию с которой объект будет взаимодействовать
         firstPlayerNode.physicsBody?.collisionBitMask = ballBitGroup
         firstPlayerNode.physicsBody?.contactTestBitMask = ballBitGroup
+        firstBgNode.physicsBody?.restitution = 0.7
         // добавляем Node в Object
         firstPlayerOnject.addChild(firstPlayerNode)
     }
@@ -136,35 +146,60 @@ class GameScene: SKScene {
     }
     
     func createBall() {
-        let force = CGVector(dx: 1000, dy: 500) //примерная сила удара
         ballNode = SKSpriteNode(texture: ballTexture)
         ballNode.size.height = 50
         ballNode.size.width = 50
         ballNode.zPosition = 1
-        ballNode.physicsBody = SKPhysicsBody(rectangleOf: ballNode.size)
+        ballNode.physicsBody = SKPhysicsBody(circleOfRadius: ballNode.size.width / 2)
         ballNode.physicsBody?.restitution = 0.7 //упругость для отскока мяча
-        ballNode.physicsBody?.friction = 0.2 // трение для контроля скрости удара
-        ballNode.physicsBody?.mass = 0.1 //масса мяча
+        ballNode.physicsBody?.friction = 0.5 // трение для контроля скрости удара
+        ballNode.physicsBody?.mass = 0.4 //масса мяча
+        ballNode.physicsBody?.linearDamping = 0.1
         ballNode.physicsBody?.isDynamic = true
         ballNode.physicsBody?.categoryBitMask = ballBitGroup
         ballNode.physicsBody?.collisionBitMask = playerBitGroup
         ballNode.physicsBody?.contactTestBitMask = playerBitGroup
-        ballNode.physicsBody?.applyForce(force)// применяем импульс
+        ballNode.physicsBody?.applyImpulse(CGVector(dx: 300, dy: 1500))
         ballNode.position = CGPoint(x: 0, y: -100)
         ballObject.addChild(ballNode)
     }
     
-    
-    
-    // MARK: - ЧЕРНОВИК
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let touch = touches.first {
-            let touchLocation = touch.location(in: self)
-            
-            let moveAction = SKAction.move(to: touchLocation, duration: 0.4)
-            firstPlayerNode.run(moveAction)
+        // SKPhysicsContactDelegate
+    /* какой то бред
+    func didBegin(_ contact: SKPhysicsContact) {
+        let bodyA = contact.bodyA
+        let bodyB = contact.bodyB
+        
+        if bodyA.categoryBitMask == ballBitGroup && bodyB.categoryBitMask == playerBitGroup {
+            ballNode.physicsBody = bodyA
+            firstPlayerNode.physicsBody = bodyB
+        } else if bodyB.categoryBitMask == ballBitGroup && bodyA.categoryBitMask == playerBitGroup {
+            ballNode.physicsBody = bodyB
+            firstPlayerNode.physicsBody = bodyA
+        } else {
+            // Не интересующее нас столкновение
+            return
         }
+        
+        // Теперь нужно определить направление, в котором мяч будет отлетать
+        // Вычисляем вектор от игрока к мячу
+        let contactPoint = contact.contactPoint
+        let playerPosition = firstPlayerNode.physicsBody?.node!.position
+        let ballPosition = ballNode.physicsBody?.node!.position
+        
+        // Вектор от игрока к мячу
+//        let dx = ballPosition.x - playerPosition.x
+//        let dy = ballPosition.y - playerPosition.y
+//        
+//        // Нормализуем вектор, чтобы получить направление
+//        let magnitude = sqrt(dx * dx + dy * dy)
+//        let direction = CGVector(dx: dx / magnitude, dy: dy / magnitude)
+        
+        // Применяем импульс к мячу для отталкивания его в направлении от игрока
+        let impulseMagnitude: CGFloat = 50.0  // Задаем силу импульса
+        let impulse = CGVector(dx: 500, dy: 300)
+        
+        ballNode.physicsBody?.applyImpulse(impulse)
     }
-     
+     */
 }
