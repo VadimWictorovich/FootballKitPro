@@ -18,6 +18,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var firstPlayerTexPos1: SKTexture!
     //var secondPlayerTexPos1: SKTexture!
     var ballTexture: SKTexture!
+    var firstGoalTex: SKTexture!
+    var secondGoalTex: SKTexture!
 
     // SPRITE NODES
     var firstBgNode = SKSpriteNode()
@@ -25,6 +27,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var firstPlayerNode = SKSpriteNode()
     //var secondPlayerNode = SKSpriteNode()
     var ballNode = SKSpriteNode()
+    var firstGoalNode = SKSpriteNode()
+    var secondGoalNode = SKSpriteNode()
+
     
     // SPRITE OBJECTS
     var firstBgObject = SKNode()
@@ -32,6 +37,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var firstPlayerOnject = SKNode()
     //var secondPlayerObject = SKNode()
     var ballObject = SKNode()
+    var firstGoalObj = SKNode()
+    var secondGoalObj = SKNode()
+
     
     // BIT MASKS
     //присваиваем категорию для того чтобы система могла отличать объекты
@@ -46,12 +54,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     // ЧТО то ВРОДЕ ЖИЗНЕННОГО ЦИКЛА
     override func didMove(to view: SKView) {
         // Background Texture
+        self.physicsWorld.contactDelegate = self
         firstBgTexture = SKTexture(imageNamed: "bgColor1")
         secondBgTexture = SKTexture(imageNamed: "bg")
         
         // Heroes Texture
         firstPlayerTexPos1 = SKTexture(imageNamed: "player1_1")
         ballTexture = SKTexture(imageNamed: "ball")
+        
+        // Goal texture
+        firstGoalTex = SKTexture(imageNamed: "goal_1")
+        secondGoalTex = SKTexture(imageNamed: "goal_2")
         
         // init methods
         createObjects()
@@ -73,6 +86,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(secondBgObject)
         self.addChild(firstPlayerOnject)
         self.addChild(ballObject)
+        self.addChild(firstGoalObj)
+        self.addChild(secondGoalObj)
     }
     
     func createGame() {
@@ -80,6 +95,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         createBg()
         createPlayers()
         createBall()
+        addGoal()
     }
     
     func createBg() {
@@ -107,7 +123,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // реализуем созданный метод анимации и присваиваем в константу
         let firstPlayerAnimate = runAnimatePl(arrayPl: firstPlayerRunAnimate)
         // запускаем анимацию
-        firstPlayerNode.run(firstPlayerAnimate)
+        //firstPlayerNode.run(firstPlayerAnimate)
         // задаем позицию
         firstPlayerNode.position = position
         //задаем размере игроку
@@ -164,7 +180,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         ballObject.addChild(ballNode)
     }
     
+    func addGoal() {
+        firstGoalNode = SKSpriteNode(texture: firstGoalTex)
+        secondGoalNode = SKSpriteNode(texture: secondGoalTex)
+        createGoal(spriteNode: firstGoalNode, position: CGPoint(x: 0, y: -520), obj: firstGoalObj)
+        createGoal(spriteNode: secondGoalNode, position: CGPoint(x: 0, y: +520), obj: secondGoalObj)
+    }
+    
+    func createGoal (spriteNode: SKSpriteNode, position: CGPoint, obj: SKNode) {
+        spriteNode.size.height = 100
+        spriteNode.size.width = 300
+        spriteNode.zPosition = 1
+        spriteNode.physicsBody = SKPhysicsBody()
+        spriteNode.physicsBody?.isDynamic = false
+        spriteNode.position = position
+        obj.addChild(spriteNode)
+    }
+    
         // SKPhysicsContactDelegate
+    func didBegin(_ contact: SKPhysicsContact) {
+        firstPlayerNode.physicsBody = contact.bodyA
+        ballNode.physicsBody = contact.bodyB
+        print("столкновение")
+    }
     /* какой то бред
     func didBegin(_ contact: SKPhysicsContact) {
         let bodyA = contact.bodyA
