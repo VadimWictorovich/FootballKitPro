@@ -45,6 +45,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //присваиваем категорию для того чтобы система могла отличать объекты
     var playerBitGroup: UInt32 = 0x1 << 1
     var ballBitGroup: UInt32 = 0x1 << 2
+    var wakkBitGroup: UInt32 = 0x1 << 3 // стены
     
     // TEXTERES ARRAY FOR ANIMATE
     var firstPlayerRunAnimate = [SKTexture]()
@@ -71,11 +72,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         createGame()
     }
     
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard let touch = touches.first else { return }
-        let touchLocation = touch.location(in: self)
-        firstPlayerNode.position = touchLocation
-    }
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        guard let touch = touches.first else { return }
+//        let touchLocation = touch.location(in: self)
+//        firstPlayerNode.position = touchLocation
+//    }
     
     override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
@@ -98,6 +99,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         createBg()
         createPlayers()
         createBall()
+        createFieldBoundaries()
         addGoal()
     }
     
@@ -111,8 +113,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         secondBgTexture = SKTexture(imageNamed: "bg")
         secondBgNode = SKSpriteNode(texture: secondBgTexture)
-        secondBgNode.size.height = self.frame.height - 300
-        secondBgNode.size.width = self.frame.width
+        secondBgNode.size.height = self.frame.height - 360
+        secondBgNode.size.width = self.frame.width - 170
         secondBgNode.zPosition = -1
         secondBgObject.addChild(secondBgNode)
     }
@@ -130,7 +132,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // задаем позицию
         firstPlayerNode.position = position
         //задаем размере игроку
-        firstPlayerNode.size.height = 110
+        firstPlayerNode.size.height = 65
         firstPlayerNode.size.width = firstPlayerNode.size.height
         // опеределяем в каком слое находится объект
         firstPlayerNode.zPosition = 1
@@ -144,8 +146,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //присваиваем категорию к которой относится объект
         firstPlayerNode.physicsBody?.categoryBitMask = playerBitGroup
         // выбираем категорию с которой объект будет взаимодействовать
-        firstPlayerNode.physicsBody?.collisionBitMask = ballBitGroup
-        firstPlayerNode.physicsBody?.contactTestBitMask = ballBitGroup
+        firstPlayerNode.physicsBody?.collisionBitMask = ballBitGroup | wakkBitGroup
+        firstPlayerNode.physicsBody?.contactTestBitMask = ballBitGroup | wakkBitGroup
         firstBgNode.physicsBody?.restitution = 0.7
         // добавляем Node в Object
         firstPlayerOnject.addChild(firstPlayerNode)
@@ -176,8 +178,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         ballNode.physicsBody?.linearDamping = 0.1
         ballNode.physicsBody?.isDynamic = true
         ballNode.physicsBody?.categoryBitMask = ballBitGroup
-        ballNode.physicsBody?.collisionBitMask = playerBitGroup
-        ballNode.physicsBody?.contactTestBitMask = playerBitGroup
+        ballNode.physicsBody?.collisionBitMask = playerBitGroup | wakkBitGroup
+        ballNode.physicsBody?.contactTestBitMask = playerBitGroup | wakkBitGroup
         ballNode.physicsBody?.applyImpulse(CGVector(dx: 300, dy: 1500))
         ballNode.position = CGPoint(x: 0, y: -100)
         ballObject.addChild(ballNode)
@@ -186,26 +188,31 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func addGoal() {
         firstGoalNode = SKSpriteNode(texture: firstGoalTex)
         secondGoalNode = SKSpriteNode(texture: secondGoalTex)
-        createGoal(spriteNode: firstGoalNode, position: CGPoint(x: 0, y: -520), obj: firstGoalObj)
-        createGoal(spriteNode: secondGoalNode, position: CGPoint(x: 0, y: +520), obj: secondGoalObj)
+        createGoal(spriteNode: firstGoalNode, position: CGPoint(x: 0, y: -500), obj: firstGoalObj)
+        createGoal(spriteNode: secondGoalNode, position: CGPoint(x: 0, y: +537), obj: secondGoalObj)
     }
     
     func createGoal (spriteNode: SKSpriteNode, position: CGPoint, obj: SKNode) {
-        spriteNode.size.height = 100
-        spriteNode.size.width = 300
-        spriteNode.zPosition = 1
+        spriteNode.size.height = 120
+        spriteNode.size.width = 330
+        spriteNode.zPosition = 2
         spriteNode.physicsBody = SKPhysicsBody()
         spriteNode.physicsBody?.isDynamic = false
         spriteNode.position = position
         obj.addChild(spriteNode)
     }
     
-        // SKPhysicsContactDelegate
-//    func didBegin(_ contact: SKPhysicsContact) {
-//        firstPlayerNode.physicsBody = contact.bodyA
-//        ballNode.physicsBody = contact.bodyB
-//        print("столкновение")
-//    }
+    // делаем стену
+    func createFieldBoundaries() {
+        let fieldFrame = secondBgNode.frame  // Границы согласно моему второму бэгрунду
+        let border = SKPhysicsBody(edgeLoopFrom: fieldFrame)
+        border.friction = 0  // Трение границ
+        border.restitution = 1.0  // Упругость, чтобы мяч отскакивал
+        self.physicsBody = border
+            // Присваиваем категорию границам
+        self.physicsBody?.categoryBitMask = wakkBitGroup
+        self.physicsBody?.collisionBitMask = ballBitGroup  // Границы сталкиваются только с мячом
+    }
     
     func didBegin(_ contact: SKPhysicsContact) {
             let bodyA = contact.bodyA
