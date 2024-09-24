@@ -72,12 +72,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let touch = touches.first {
-            let touchLocation = touch.location(in: self)
-            
-            let moveAction = SKAction.move(to: touchLocation, duration: 0.4)
-            firstPlayerNode.run(moveAction)
-        }
+        guard let touch = touches.first else { return }
+        let touchLocation = touch.location(in: self)
+        firstPlayerNode.position = touchLocation
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let touch = touches.first else { return }
+        let touchLocation = touch.location(in: self)
+        firstPlayerNode.position = touchLocation
     }
     
     // MARK: - METHODS
@@ -198,11 +201,43 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
         // SKPhysicsContactDelegate
+//    func didBegin(_ contact: SKPhysicsContact) {
+//        firstPlayerNode.physicsBody = contact.bodyA
+//        ballNode.physicsBody = contact.bodyB
+//        print("столкновение")
+//    }
+    
     func didBegin(_ contact: SKPhysicsContact) {
-        firstPlayerNode.physicsBody = contact.bodyA
-        ballNode.physicsBody = contact.bodyB
-        print("столкновение")
-    }
+            let bodyA = contact.bodyA
+            let bodyB = contact.bodyB
+            print("столкновение")
+
+            // Проверяем, какой объект - игрок, а какой - мяч
+            if bodyA.categoryBitMask == playerBitGroup && bodyB.categoryBitMask == ballBitGroup {
+                // Если игрок столкнулся с мячом
+                if let ball = bodyB.node as? SKSpriteNode {
+                    applyImpulseToBall(ball, fromPlayer: bodyA.node)
+                }
+            } else if bodyA.categoryBitMask == ballBitGroup && bodyB.categoryBitMask == playerBitGroup {
+                // Если мяч столкнулся с игроком
+                if let ball = bodyA.node as? SKSpriteNode {
+                    applyImpulseToBall(ball, fromPlayer: bodyB.node)
+                }
+            }
+        }
+
+        // Функция для добавления импульса мячу
+        func applyImpulseToBall(_ ball: SKSpriteNode, fromPlayer player: SKNode?) {
+            guard let player = player else { return }
+            
+            // Рассчитываем направление импульса (например, от игрока в сторону мяча)
+            let dx = ball.position.x - player.position.x
+            let dy = ball.position.y - player.position.y
+            
+            // Применяем импульс к мячу
+            let impulse = CGVector(dx: dx * 10, dy: dy * 10)
+            ball.physicsBody?.applyImpulse(impulse)
+        }
     /* какой то бред
     func didBegin(_ contact: SKPhysicsContact) {
         let bodyA = contact.bodyA
