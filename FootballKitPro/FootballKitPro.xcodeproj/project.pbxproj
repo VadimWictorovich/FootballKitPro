@@ -18,8 +18,8 @@
 		6C8476AE2C9B446600562F5C /* 6896247 1-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C84767E2C9B446600562F5C /* 6896247 1-1.png */; };
 		6C8476AF2C9B446600562F5C /* 6896247 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C84767F2C9B446600562F5C /* 6896247 1.png */; };
 		6C8476B02C9B446600562F5C /* At the beginning of the game, the required number of goals is indicated.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476802C9B446600562F5C /* At the beginning of the game, the required number of goals is indicated.png */; };
-		6C8476B22C9B446600562F5C /* goal-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476822C9B446600562F5C /* goal-1.png */; };
-		6C8476B32C9B446600562F5C /* goal-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476832C9B446600562F5C /* goal-2.png */; };
+		6C8476B22C9B446600562F5C /* goal_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476822C9B446600562F5C /* goal_1.png */; };
+		6C8476B32C9B446600562F5C /* goal_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476832C9B446600562F5C /* goal_2.png */; };
 		6C8476B42C9B446600562F5C /* goal.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476842C9B446600562F5C /* goal.png */; };
 		6C8476B72C9B446600562F5C /* Group 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C8476872C9B446600562F5C /* Group 6.png */; };
 		6C8476BC2C9B446600562F5C /* Group 13.png in Resources */ = {isa = PBXBuildFile; fileRef = 6C84768C2C9B446600562F5C /* Group 13.png */; };
@@ -70,8 +70,8 @@
 		6C84767E2C9B446600562F5C /* 6896247 1-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "6896247 1-1.png"; sourceTree = "<group>"; };
 		6C84767F2C9B446600562F5C /* 6896247 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "6896247 1.png"; sourceTree = "<group>"; };
 		6C8476802C9B446600562F5C /* At the beginning of the game, the required number of goals is indicated.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "At the beginning of the game, the required number of goals is indicated.png"; sourceTree = "<group>"; };
-		6C8476822C9B446600562F5C /* goal-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "goal-1.png"; sourceTree = "<group>"; };
-		6C8476832C9B446600562F5C /* goal-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "goal-2.png"; sourceTree = "<group>"; };
+		6C8476822C9B446600562F5C /* goal_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goal_1.png; sourceTree = "<group>"; };
+		6C8476832C9B446600562F5C /* goal_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goal_2.png; sourceTree = "<group>"; };
 		6C8476842C9B446600562F5C /* goal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goal.png; sourceTree = "<group>"; };
 		6C8476872C9B446600562F5C /* Group 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 6.png"; sourceTree = "<group>"; };
 		6C84768C2C9B446600562F5C /* Group 13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Group 13.png"; sourceTree = "<group>"; };
@@ -158,8 +158,8 @@
 				6C84767E2C9B446600562F5C /* 6896247 1-1.png */,
 				6C84767F2C9B446600562F5C /* 6896247 1.png */,
 				6C8476802C9B446600562F5C /* At the beginning of the game, the required number of goals is indicated.png */,
-				6C8476822C9B446600562F5C /* goal-1.png */,
-				6C8476832C9B446600562F5C /* goal-2.png */,
+				6C8476822C9B446600562F5C /* goal_1.png */,
+				6C8476832C9B446600562F5C /* goal_2.png */,
 				6C8476842C9B446600562F5C /* goal.png */,
 				6C8476872C9B446600562F5C /* Group 6.png */,
 				6C84768C2C9B446600562F5C /* Group 13.png */,
@@ -281,7 +281,7 @@
 				6C8476DC2C9B446600562F5C /* When you press the button, freezes the enemy for 1-2 seconds, giving the player a chance to score a goal.png in Resources */,
 				6C8476732C99DFD500562F5C /* Base in Resources */,
 				6C8476D62C9B446600562F5C /* Tablo-1.png in Resources */,
-				6C8476B22C9B446600562F5C /* goal-1.png in Resources */,
+				6C8476B22C9B446600562F5C /* goal_1.png in Resources */,
 				6C8476BE2C9B446600562F5C /* Group 16.png in Resources */,
 				6C8476C82C9B446600562F5C /* Group 34.png in Resources */,
 				6C8476D82C9B446600562F5C /* Tablo.png in Resources */,
@@ -296,7 +296,7 @@
 				6C8476D12C9B446600562F5C /* Popup.png in Resources */,
 				6C8476D32C9B446600562F5C /* Rectangle 13.png in Resources */,
 				6C84766C2C99DFD500562F5C /* Actions.sks in Resources */,
-				6C8476B32C9B446600562F5C /* goal-2.png in Resources */,
+				6C8476B32C9B446600562F5C /* goal_2.png in Resources */,
 				6C8476CA2C9B446600562F5C /* Group 38.png in Resources */,
 				6C8476C02C9B446600562F5C /* Group 18.png in Resources */,
 				6C8476C62C9B446600562F5C /* Group 32.png in Resources */,
@@ -464,6 +464,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XS362S4TAX;
@@ -481,6 +482,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = VadimIgnatenkoCompany.FootballKitPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -492,6 +494,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = XS362S4TAX;
@@ -509,6 +512,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = VadimIgnatenkoCompany.FootballKitPro;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
